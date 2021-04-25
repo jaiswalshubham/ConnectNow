@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/background_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_join" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/foreground_video"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_latency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_low_latency"
+        android:enabled="false"
+        android:visibility="gone"
+        android:layout_above="@id/ll_join"
+        android:layout_marginBottom="16dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/btn_publish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:text="@string/enable_publish"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_18sdp"
+            android:enabled="false"
+            android:gravity="center"
+            android:background="@drawable/bg_with_radius"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_channel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/channel_id"
+            android:text="demoChannel1"
+            android:digits="@string/chanel_support_char"/>
+
+        <TextView
+            android:id="@+id/btn_join"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:textSize="@dimen/_18sdp"
+            android:gravity="center"
+            android:background="@drawable/bg_with_radius"
+            android:text="@string/join" />
+
+    </LinearLayout>
+
+</RelativeLayout>

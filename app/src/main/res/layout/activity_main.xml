@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_chat_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/local_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/greyish_brown">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/remote_video_view_container"
+        android:layout_below="@id/local_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/btn_call"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:background="@color/greyish"/>
+
+        <ImageView
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_toRightOf="@id/btn_call"
+            android:layout_toEndOf="@id/btn_call"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:onClick="onSwitchCameraClicked"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/btn_mute"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_toLeftOf="@id/btn_call"
+            android:layout_toStartOf="@id/btn_call"
+            android:layout_centerVertical="true"
+            android:onClick="onLocalAudioMuteClicked"
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+
+</RelativeLayout>
